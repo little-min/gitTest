@@ -1,0 +1,71 @@
+
+git config --global user.name "hexiaomin"
+git config --global user.email "768063060@qq.com"
+ssh-keygen -t rsa -C "768063060@qq.com"
+cat ~/.ssh/id_rsa.pub
+git status
+
+git add hello.txt 提交暂存区
+
+git commit -m "first commit" hello.txt  提交本地库
+git commit -m "second commit" hello.txt
+
+git rm
+############版本###################
+git reglog 查看历史版本信息
+
+git log 查看版本详细信息
+
+git reset --hard 5770506 穿越版本
+cat hello.txt 
+
+git reset --hard 版本号
+
+############分支###################
+git branch 分支名：hot-fix  创建分支
+git branch -v  查看分支
+
+git checkout 分支名  切换分支
+
+git merge hot-fix      hot-fix合并到master  合并分支
+
+###########冲突代码合并################
+git status 查看一下状态
+手工查看修改
+git add hello.txt 重新提交暂存区
+git cmmit -m "merge test"  这里不加文件名
+
+############团队写作###################
+https://github.com/little-min/LearnDemo.git
+
+git remote -v
+创建别名：
+git remote add LearnDemo https://github.com/little-min/LearnDemo.git
+
+推送本地库到远程库：
+git push LearnDemo master
+
+更新远程库拉取到本地,没冲突，git自动提交本地库
+git pull LearnDemo master
+
+克隆远程库代码：克隆代码不需要登录账号
+拉取代码、初始化本地库、创建别名
+git clone https://github.com/little-min/LearnDemo.git
+
+
+git add
+git commit
+
+
+git push https://github.com/little-min/LearnDemo.git
+
+fork
+
+SSH
+ssh-keygen -t rsa -C
+
+
+
+
+git@github.com:little-min/gitTest.git
+
